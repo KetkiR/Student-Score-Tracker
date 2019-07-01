@@ -1,24 +1,21 @@
-# Scudent Score Tracking (Backend)
-Application for showing chart of thermostat details and also upload thermostat data.
+# Student Score Tracker (UI)
+Application for recording student's score and view their details in form of charts.
 
 ## Pre-requisite
 
-  - Laravel version 5.5.x
-  - Mongo 3.x
-  - php version 7.0.x
-  - composer version 1.8.6
+  - Node js version 10.15.0
+  - Angular version 8
 
+### Installation
 
-### Installation 
-
-- Create a project folder Student_Score_Tracker
+- Create a project folder Student_Score_Tracker_UI
     ```sh
-    $ mkdir Student_Score_Tracker
+    $ mkdir Student_Score_Tracker_UI
     ```
 
-- Go to a project root folder Student_Score_Tracker
+- Go to a project root folder Student_Score_Tracker_UI
     ```sh
-    $ cd Student_Score_Tracker
+    $ cd Student_Score_Tracker_UI
     ```
 
 - Clone the repo from git to the current directory.
@@ -29,38 +26,23 @@ Application for showing chart of thermostat details and also upload thermostat d
     ```sh
     $ git pull origin master
     ```
-- Install all the backend dependency
+
+- Install all the frontend dependency
     ```sh
-    $ composer install
-    ```
-- locally boot mongo by following commands
-    ```sh
-    $ sudo su
-    ```
-    ```sh
-    $ mongod
-    ```
-- Open another terminal and login to mongo shell by the below command.
-    ```sh
-    $ mongo
-    ```
-- Create database `temp` in MongoDB.
-    ```sh
-    $ db.use('temp')
-    ```
-- Create collection `student` inside database  `temp` .
-    ```sh
-    $ db.createCollection('student')
+    $ npm install
     ```
     
 ### Deploy
 - Run the Student Score Tracking app locally.
 
-    >Booting the application. Go to the root folder of the project on terminal and run the below command
+    >Boot the application
 
     ```sh
-    $ php artisan serve
+    $ ng serve
     ```
+    
 
 ### To use the app
-[http://localhost:8000/](http://localhost:8000/)
+- Navigate to [http://localhost:4200/](http://localhost:4200/)
+- To enter data of a student click on `Enter score` option and update/insert a record.
+- To see student details click on `View score` option.
