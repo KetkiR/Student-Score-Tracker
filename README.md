@@ -1,21 +1,24 @@
-# Student Score Tracker (UI)
+# Scudent Score Tracking (Backend)
 Application for recording student's score and view their details in form of charts.
 
 ## Pre-requisite
 
-  - Node js version 10.15.0
-  - Angular version 8
+  - Laravel version 5.5.x
+  - Mongo 3.x
+  - php version 7.0.x
+  - composer version 1.8.6
 
-### Installation
 
-- Create a project folder Student_Score_Tracker_UI
+### Installation 
+
+- Create a project folder Student_Score_Tracker
     ```sh
-    $ mkdir Student_Score_Tracker_UI
+    $ mkdir Student_Score_Tracker
     ```
 
-- Go to a project root folder Student_Score_Tracker_UI
+- Go to a project root folder Student_Score_Tracker
     ```sh
-    $ cd Student_Score_Tracker_UI
+    $ cd Student_Score_Tracker
     ```
 
 - Clone the repo from git to the current directory.
@@ -26,23 +29,38 @@ Application for recording student's score and view their details in form of char
     ```sh
     $ git pull origin master
     ```
-
-- Install all the frontend dependency
+- Install all the backend dependency
     ```sh
-    $ npm install
+    $ composer install
+    ```
+- locally boot mongo by following commands
+    ```sh
+    $ sudo su
+    ```
+    ```sh
+    $ mongod
+    ```
+- Open another terminal and login to mongo shell by the below command.
+    ```sh
+    $ mongo
+    ```
+- Create database `temp` in MongoDB.
+    ```sh
+    $ db.use('temp')
+    ```
+- Create collection `student` inside database  `temp` .
+    ```sh
+    $ db.createCollection('student')
     ```
     
 ### Deploy
 - Run the Student Score Tracking app locally.
 
-    >Boot the application
+    >Booting the application. Go to the root folder of the project on terminal and run the below command
 
     ```sh
-    $ ng serve
+    $ php artisan serve
     ```
-    
 
 ### To use the app
-- Navigate to [http://localhost:4200/](http://localhost:4200/)
-- To enter data of a student click on `Enter score` option and update/insert a record.
-- To see student details click on `View score` option.
+[http://localhost:8000/](http://localhost:8000/)
